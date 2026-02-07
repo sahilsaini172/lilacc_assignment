@@ -3,7 +3,7 @@ import PrimaryButton from "../components/PrimaryButton";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 md:flex-row gap-12 lg:gap-24 xl:gap-32 xl:justify-start xl:px-12">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 md:flex-row gap-12 lg:gap-24 xl:gap-32 xl:justify-start xl:px-12 py-12 md:py-24 lg:py-32 xl:py-64">
       <div className="w-[179px] h-[269px] md:w-[clamp(179px,40vw,859px)] md:h-[clamp(269px,60vw,1289px)] rounded-t-full overflow-hidden mb-2">
         <Image
           src={"/images/fluidImage.png"}
