@@ -1,3 +1,4 @@
+import Navbar from "./components/Navbar";
 import Footer from "./landing/Footer";
 import Hero from "./landing/Hero";
 import Section1 from "./landing/Section1";
@@ -11,6 +12,7 @@ import Section7 from "./landing/Section7";
 const Home = () => {
   return (
     <div className="bg-background text-foreground">
+      <Navbar/>
       <Hero />
       <Section1 />
       <Section2 />
