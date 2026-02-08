@@ -17,7 +17,7 @@ type AccordionGroupProps = {
 
 const AccordionGroup = ({
   items,
-  iconPosition = "left",
+  iconPosition = "right",
   className,
 }: AccordionGroupProps) => {
   const [openId, setOpenId] = useState<number | null>(null);
@@ -27,7 +27,7 @@ const AccordionGroup = ({
   }
 
   return (
-    <div className={`w-full`}>
+    <div className={`w-full flex flex-col gap-2`}>
       {items.map((item) => (
         <AccordionVariant
           key={item.id}

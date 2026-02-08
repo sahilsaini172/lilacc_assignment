@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className="flex items-center justify-between px-4 py-5">
+      <div className="flex items-center justify-between px-4 py-5 xl:py-8 xl:px-12 2xl:py-16 2xl:px-16">
         <div
           onClick={() => setIsOpen(!isOpen)}
           className={`size-8 relative *:duration-400 lg:hidden *:ease-in-out ${isOpen ? "scale-90" : "scale-100"}`}
@@ -18,8 +18,8 @@ const Navbar = () => {
             className={`absolute h-px w-full bg-foreground ${isOpen ? "rotate-45 top-1/2 -translate-y-1/2 " : "bottom-2.5"}`}
           />
         </div>
-        <div className="text-[clamp(18px,2vw,46px)] leading-[clamp(21px,2vw,56px)] font-medium">
-          Lilac Template
+        <div className="text-[clamp(18px,2vw,46px)] leading-[clamp(21px,2vw,56px)] font-medium font-heading">
+          Dr. Maya Reynolds
         </div>
         <div className="hidden lg:flex items-center gap-4 text-transparent pointer-events-none lg:text-foreground lg:pointer-events-auto  ">
           <a href="" className="no-underline">

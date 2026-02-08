@@ -3,7 +3,7 @@ import SecondaryButton from "../components/SecondaryButton";
 
 const Section7 = () => {
   return (
-    <div className="flex flex-col items-center bg-accent text-white  justify-center py-20.5 md:py-40 lg:py-80">
+    <div className="flex flex-col items-center bg-accent text-foreground  justify-center py-20.5 md:py-40 lg:py-80">
       <div className="flex flex-col py-21.5 px-8 items-center">
         <div className="py-12 px-8 text-center md:w-2/3">
           <h2 className=" mb-4">Get started today.</h2>

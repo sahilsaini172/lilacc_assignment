@@ -1,5 +1,3 @@
-import { ArrowRight } from "lucide-react";
-
 const SecondaryButton = ({
   className,
   children,
@@ -10,7 +8,7 @@ const SecondaryButton = ({
   return (
     <div
       role="button"
-      className={`flex flex-wrap items-center justify-center w-fit gap-2 uppercase text-sm font-semibold px-7.5 border border-white py-3.5 cursor-pointer hover:bg-white hover:text-white transition-colors duration-400 ease-in ${className}`}
+      className={`flex bg-background text-foreground flex-wrap items-center justify-center w-fit uppercase px-12 py-4 rounded-xs cursor-pointer hover:bg-background-variant transition-colors duration-400 ease-in ${className}`}
     >
       <a
         href=""
@@ -18,8 +16,6 @@ const SecondaryButton = ({
       >
         {children}
       </a>
-
-      <ArrowRight size={16} className="ml-1.25" />
     </div>
   );
 };

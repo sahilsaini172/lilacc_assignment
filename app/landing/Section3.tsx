@@ -1,38 +1,34 @@
-import Image from "next/image";
 import PrimaryButton from "../components/PrimaryButton";
 
 const Section3 = () => {
   return (
-    <div className="flex flex-col bg-tertiary md:flex-row md:items-stretch" >
-      <div className="w-full relative h-[clamp(270px,30vw,500px)] bg-tertiary overflow-hidden md:w-1/2 md:h-auto">
-        <Image
+    <div className="relative flex flex-col bg-background-variant md:flex-row overflow-hidden">
+      {/* Image Side */}
+      <div className="relative w-full md:w-1/2 md:min-h-full">
+        <img
           src="/images/sec3.webp"
-          alt="dairy and coffee"
-          fill
-          className="object-cover"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
         />
+
+        {/* Overlay */}
+        <div className="absolute inset-0 md:bg-transparent bg-accent/75"></div>
       </div>
-      <div className="flex flex-col md:w-1/2">
-        <div className="flex-col flex py-12 px-8">
-          <h2 className="mb-4">
-            You don’t have to do this all <i>alone</i>.
-          </h2>
-          <p className="mt-4">If you are facing any of these, there’s hope:</p>
-          <ul className="list-disc list-inside pl-10 gap-1">
-            <li>Persistent feelings of sadness or hopelessness</li>
-            <li>Trouble focusing or making decisions</li>
-            <li>Difficulty maintaining relationships</li>
-            <li>Feeling constantly exhausted or unmotivated</li>
-            <li>A pervasive sense of being overwhelmed</li>
-          </ul>
-          <p>
-            With empathy and guidance, we'll work together to navigate the
-            challenges life throws your way.
-          </p>
-        </div>
-        <PrimaryButton className="w-full border-b-0 border-x-0 mt-12">
-          work with me
-        </PrimaryButton>
+
+      {/* Content Side */}
+      <div className="relative z-10 flex flex-col justify-center w-full md:w-1/2 py-12 px-8 md:py-16 md:px-12">
+        <h2 className="mb-4">
+          Therapy works best when clients feel respected, understood, and
+          actively involved in the process.
+        </h2>
+
+        <p className="mt-4">
+          My goal is not just symptom relief, but helping clients develop
+          insight, resilience, and a stronger relationship with themselves over
+          time.
+        </p>
+
+        <PrimaryButton className="mt-10 w-fit">Work With Me</PrimaryButton>
       </div>
     </div>
   );

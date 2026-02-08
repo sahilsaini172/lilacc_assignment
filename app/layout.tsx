@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const gopher = localFont({
-  src: [
-    { path: "../public/fonts/Gopher_Hairline.woff2", weight: "100", style: "normal" },
-    { path: "../public/fonts/Gopher_Thin.woff", weight: "200", style: "normal" },
-    { path: "../public/fonts/Gopher_Light.woff", weight: "300", style: "normal" },
-    { path: "../public/fonts/Gopher_Regular.woff2", weight: "400", style: "normal" },
-    { path: "../public/fonts/Gopher_Medium.woff2", weight: "500", style: "normal" },
-    { path: "../public/fonts/Gopher_Bold.woff2", weight: "700", style: "normal" },
-    { path: "../public/fonts/Gopher_Black.woff2", weight: "900", style: "normal" },
-  ],
-  variable: "--font-gopher",
-  display: "swap",
-});
+// const gopher = localFont({
+//   src: [
+//     { path: "../public/fonts/Gopher_Hairline.woff2", weight: "100", style: "normal" },
+//     { path: "../public/fonts/Gopher_Thin.woff", weight: "200", style: "normal" },
+//     { path: "../public/fonts/Gopher_Light.woff", weight: "300", style: "normal" },
+//     { path: "../public/fonts/Gopher_Regular.woff2", weight: "400", style: "normal" },
+//     { path: "../public/fonts/Gopher_Medium.woff2", weight: "500", style: "normal" },
+//     { path: "../public/fonts/Gopher_Bold.woff2", weight: "700", style: "normal" },
+//     { path: "../public/fonts/Gopher_Black.woff2", weight: "900", style: "normal" },
+//   ],
+//   variable: "--font-gopher",
+//   display: "swap",
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${gopher.variable} antialiased`}>{children}</body>
+      <body className={` antialiased`}>{children}</body>
     </html>
   );
 }

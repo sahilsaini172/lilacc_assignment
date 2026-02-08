@@ -3,9 +3,9 @@ import Card from "../components/Card";
 const cardData = [
   {
     id: 1,
-    heading: "Self-Esteem",
+    heading: "Trauma Therapy",
     description:
-      "Building a strong sense of self-worth is key to living a fulfilled life. Let's work together to bolster your self-esteem.",
+      "I work with adults who have experienced single-incident trauma as well as more complex, long-standing patterns that may stem from childhood, relationships, or chronic stress. My approach is paced carefully, with an emphasis on safety, stabilization, and helping clients feel more regulated in their daily lives.",
     imgSrc: "/images/selfEsteem.png",
     imgWidth: 1920,
     imgHeight: 1281,
@@ -13,9 +13,9 @@ const cardData = [
   },
   {
     id: 2,
-    heading: "Relationships",
+    heading: "Anxiety & Stress",
     description:
-      "Navigating relationships can be complex. I'm here to guide you through these complexities to help you form healthier connections.",
+      "Whether you're experiencing constant worry, physical tension, or difficulty sleeping, we'll work together to understand both the emotional and physiological components of what you're experiencing using evidence-based methods including CBT, EMDR, and mindfulness-based practices.",
     imgSrc: "/images/relationships.png",
     imgWidth: 1920,
     imgHeight: 1281,
@@ -23,9 +23,9 @@ const cardData = [
   },
   {
     id: 3,
-    heading: "Burnout",
+    heading: "Burnout & Perfectionism",
     description:
-      "Feeling overwhelmed by your career is more common than you think. Together, we'll identify strategies to manage and prevent burnout.",
+      "I frequently support entrepreneurs, creatives, and professionals who feel disconnected from themselves after years of pushing through stress. Therapy can become a space to slow down, reconnect, and develop more sustainable ways of living and working.",
     imgSrc: "/images/burnout.png",
     imgWidth: 1920,
     imgHeight: 1281,
@@ -35,20 +35,25 @@ const cardData = [
 
 const Section2 = () => {
   return (
-    <div className="flex flex-col py-21.5 lg:px-12">
-      <h2 className="text-center px-3 pb-12.5">My Specialities</h2>
-      <div className="flex flex-col px-6 gap-5 md:flex-row">
+    <div className="flex flex-col py-20 md:px-4 md:py-24 lg:px-8 lg:py-28 xl:px-12 xl:py-32 2xl:px-16 2xl:py-36 bg-background">
+      <h2 className="text-center mb-8 md:mb-12">
+        My Specialities
+      </h2>
+
+      <div className="flex flex-col md:flex-row gap-6 px-6 items-stretch">
         {cardData.map((item) => (
-          <Card
-            key={item.id}
-            id={item.id}
-            heading={item.heading}
-            description={item.description}
-            imgSrc={item.imgSrc}
-            imgWidth={item.imgWidth}
-            imgHeight={item.imgHeight}
-            imgAlt={item.imgAlt}
-          />
+          <div key={item.id} className="flex md:flex-1">
+            <Card
+              id={item.id}
+              heading={item.heading}
+              description={item.description}
+              imgSrc={item.imgSrc}
+              imgWidth={item.imgWidth}
+              imgHeight={item.imgHeight}
+              imgAlt={item.imgAlt}
+              className="w-full"
+            />
+          </div>
         ))}
       </div>
     </div>

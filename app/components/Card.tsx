@@ -22,22 +22,26 @@ const Card = ({
   className,
 }: CardProps) => {
   return (
-    <div key={id} className="flex flex-col flex-1 border p-5 bg-secondary">
-      <h3 className="w-full">{heading}</h3>
-      <p className="mt-8">
-        {description}
-        <br />
-        <br />
-      </p>
-      <div className="mt-auto flex justify-center">
+    <div
+      key={id}
+      className={`flex flex-col h-full p-8 bg-background-variant rounded-xs shadow-xl/20 shadow-foreground/10 md:items-center justify-start md:flex-1 md:pb-8 lg:p-12 ${className}`}
+    >
+      <div className="mb-8">
         <Image
           src={imgSrc}
           width={imgWidth}
           height={imgHeight}
           alt={imgAlt}
-          className="object-cover rounded-full aspect-square w-[clamp(190px,60vw,551px)]"
+          className="object-cover rounded-full aspect-square w-[clamp(50px,20vw,551px)]"
         />
       </div>
+
+      <h3 className="w-full mb-4">{heading}</h3>
+
+      {/* this pushes content to fill height */}
+      <p className="text-[clamp(15px,2vw,22px)] leading-[clamp(24px,2vw,35px)]">
+        {description}
+      </p>
     </div>
   );
 };

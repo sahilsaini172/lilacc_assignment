@@ -1,3 +1,5 @@
+import { X } from "lucide-react";
+
 type AccordionVariantProps = {
   question: string;
   answer: string;
@@ -12,41 +14,35 @@ const AccordionVariant = ({
   answer,
   isOpen,
   onToggle,
-  iconPosition = "left",
+  iconPosition = "right",
   className,
 }: AccordionVariantProps) => {
   return (
-    <div className="w-full border-b py-3 transition">
+    <div
+      className={`w-full  p-4 transition bg-background text-foreground rounded-md ${className}`}
+    >
       <button
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="flex w-full items-center gap-6 text-left"
+        className="flex w-full items-center gap-4 text-left"
       >
         {/* Icon LEFT */}
         {iconPosition === "left" && (
-          <span className="relative size-6 shrink-0">
-            <span
-              className={`absolute left-1/2 top-1/2 h-full w-px -translate-x-1/2 -translate-y-1/2 bg-foreground transition-transform duration-200 ${
-                isOpen ? "rotate-90" : "rotate-0"
-              }`}
-            />
-            <span className="absolute left-1/2 top-1/2 h-px w-full -translate-x-1/2 -translate-y-1/2 bg-foreground" />
-          </span>
+          <X
+            size={16}
+            className={`duration-400 ease-in-out ${isOpen ? "rotate-0" : "rotate-45"}`}
+          />
         )}
 
         {/* Question */}
-        <h4 className={`flex-1 ${className}`}>{question}</h4>
+        <h3 className={`flex-1`}>{question}</h3>
 
         {/* Icon RIGHT */}
         {iconPosition === "right" && (
-          <span className="relative size-6 shrink-0">
-            <span
-              className={`absolute left-1/2 top-1/2 h-full w-px -translate-x-1/2 -translate-y-1/2 bg-foreground transition-transform duration-200 ${
-                isOpen ? "rotate-90" : "rotate-0"
-              }`}
-            />
-            <span className="absolute left-1/2 top-1/2 h-px w-full -translate-x-1/2 -translate-y-1/2 bg-foreground" />
-          </span>
+          <X
+            size={16}
+            className={`duration-400 ease-in-out ${isOpen ? "rotate-0" : "rotate-45"}`}
+          />
         )}
       </button>
 

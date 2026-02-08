@@ -1,5 +1,3 @@
-import { ArrowRight } from "lucide-react";
-
 const PrimaryButton = ({
   className,
   children,
@@ -10,7 +8,7 @@ const PrimaryButton = ({
   return (
     <div
       role="button"
-      className={`flex flex-wrap items-center justify-center w-fit gap-2 uppercase text-sm font-semibold px-7.5 border border-foreground py-3.5 cursor-pointer hover:bg-foreground hover:text-white transition-colors duration-400 ease-in ${className}`}
+      className={`flex bg-primary flex-wrap items-center justify-center w-fit uppercase text-white px-12 py-4 rounded-xs cursor-pointer hover:bg-primary-hover transition-colors duration-400 ease-in ${className}`}
     >
       <a
         href=""
@@ -18,8 +16,6 @@ const PrimaryButton = ({
       >
         {children}
       </a>
-
-      <ArrowRight size={16} className="ml-1.25" />
     </div>
   );
 };
