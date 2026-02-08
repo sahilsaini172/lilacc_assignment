@@ -5,11 +5,11 @@ const Footer = () => {
     <div className="flex flex-col text-center md:text-left">
       <div className="flex flex-col bg-background-variant py-8 gap-8 md:flex-row md:justify-between md:py-8 md:px-8 lg:p-12 xl:p-16  2xl:p-20">
         <div className="flex flex-col">
-          <h3 className="mb-4">Lilac Template</h3>
+          <h3 className="mb-4">Dr. Maya Reynolds</h3>
           <div className="mt-4 flex flex-col gap-4">
             <address className="not-italic">
-              123 Example Road
-              <br /> Minneapolis, MN
+              123th Street 45 W,
+              <br /> Santa Monica, CA 90401
             </address>
             <p>
               <a href="mailto:email@example.com">email@example.com</a>
